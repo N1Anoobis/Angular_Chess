@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { gameSubject } from './Game';
-// import { BoardComponent } from './board/board.component';
 
 @Component({
   selector: 'app-root',

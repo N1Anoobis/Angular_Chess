@@ -1,4 +1,9 @@
-import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  Input,
+  OnInit,
+} from '@angular/core';
 import { Piece } from 'src/interfaces';
 
 @Component({
@@ -11,11 +16,9 @@ export class PieceComponent implements OnInit {
   @Input() piece!: Piece;
   constructor() {}
 
-  ngOnInit(): void {
-    console.log(this.piece ? this.piece.type : null);
-  }
+  ngOnInit(): void {}
 
-  display() {
-    this.piece ? this.piece.type : '';
+  getPatch() {
+    return `../../assets/${this.piece.type}_${this.piece.color}.png`;
   }
 }

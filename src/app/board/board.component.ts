@@ -19,7 +19,6 @@ export class BoardComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {
-    console.log(this.board)
     this.flatBoard = this.board!.flat();
   }
 
