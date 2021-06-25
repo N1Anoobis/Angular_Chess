@@ -1,1 +1,3 @@
-<p>board works!</p>
+<div class="board">
+  <app-board-square class="square" *ngFor="let piece of flatBoard; let i = index" [piece]="piece"></app-board-square>
+</div>
