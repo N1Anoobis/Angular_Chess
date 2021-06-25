@@ -4,6 +4,7 @@ import {
   Input,
   OnInit,
 } from '@angular/core';
+import { Piece } from 'src/interfaces';
 
 @Component({
   selector: 'app-board',
@@ -12,12 +13,14 @@ import {
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class BoardComponent implements OnInit {
-  @Input() board: any;
-  flatBoard: any;
+  @Input()
+  board: any;
+  flatBoard!: Piece[];
   constructor() {}
 
   ngOnInit(): void {
-    this.flatBoard = this.board.flat();
+    console.log(this.board)
+    this.flatBoard = this.board!.flat();
   }
 
   isBlack(i: number): boolean {
